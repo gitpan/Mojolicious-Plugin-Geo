@@ -1,9 +1,9 @@
 --- #YAML:1.0
 name:               Mojolicious-Plugin-Geo
-version:            0.01
+version:            0.02
 abstract:           ~
 author:
-    - A Good Programmer <nospam@cpan.org>
+    - elb0w <elb0w@elbowrage.com>
 license:            unknown
 distribution_type:  module
 configure_requires:

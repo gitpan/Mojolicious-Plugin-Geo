@@ -2,7 +2,7 @@ package Mojolicious::Plugin::Geo;
 use Mojo::Base 'Mojolicious::Plugin';
 use Mojo::UserAgent;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub register {
     my ($self, $app) = @_;
@@ -37,15 +37,18 @@ Mojolicious::Plugin::Geo - Mojolicious Plugin
 =head1 DESCRIPTION
 
 L<Mojolicious::Plugin::Geo> is a L<Mojolicious> plugin.
+This plugin uses a geolocation server of an unknown provider. It is one of the more accurate I have found. I may add some free public ones later but have not had a chance.
 
 =head1 METHODS
 
 L<Mojolicious::Plugin::Geo> inherits all methods from
 L<Mojolicious::Plugin> and implements the following new ones.
 
-=head2 C<register>
+=head2 C<geo>
 
-  $plugin->register;
+    $self->geo('8.8.8.8')
+
+    Returns an object with basic geo data. Lat, Lon, City, Country, Postal Code etc..
 
 Register plugin in L<Mojolicious> application.
 
